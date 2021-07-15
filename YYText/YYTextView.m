@@ -1267,6 +1267,8 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 
 /// Returns whether the text view can paste data from pastboard.
 - (BOOL)_isPasteboardContainsValidValue {
+    return YES;
+    /*
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     if (pasteboard.string.length > 0) {
         return YES;
@@ -1282,6 +1284,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
         }
     }
     return NO;
+    */
 }
 
 /// Save current selected attributed text to pasteboard.

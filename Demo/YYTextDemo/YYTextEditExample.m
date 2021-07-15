@@ -39,11 +39,11 @@
     __weak typeof(self) _self = self;
     
     UIView *toolbar;
-    if ([UIVisualEffectView class]) {
-        toolbar = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
-    } else {
+//    if ([UIVisualEffectView class]) {
+//        toolbar = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+//    } else {
         toolbar = [UIToolbar new];
-    }
+//    }
     toolbar.size = CGSizeMake(kScreenWidth, 40);
     toolbar.top = kiOS7Later ? 64 : 0;
     [self.view addSubview:toolbar];
@@ -166,6 +166,7 @@
     imageView.userInteractionEnabled = YES;
     imageView.layer.cornerRadius = imageView.height / 2;
     imageView.center = CGPointMake(kScreenWidth / 2, kScreenWidth / 2);
+    imageView.backgroundColor = [UIColor redColor];
     self.imageView = imageView;
 
     
